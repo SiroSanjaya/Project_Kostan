@@ -1,68 +1,63 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 const callouts = [
   {
-    name: 'Desk and Office',
-    description: 'Work from home accessories',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
-    imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
+    name: 'Kost Cozy Living',
+    description: 'Kost nyaman untuk mahasiswa dan pekerja',
+    imageSrc: 'https://www.rukita.co/stories/wp-content/uploads/2023/05/Common-Coliving-Addams-1.webp',
+    imageAlt: 'Gambar tampilan depan Kost Cozy Living',
+    href: '/kost-details/cozy-living',
   },
   {
-    name: 'Self-Improvement',
-    description: 'Journals and note-taking',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
-    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    name: 'Kost Minimalis',
+    description: 'Fasilitas lengkap, desain minimalis modern',
+    imageSrc: 'https://www.rukita.co/stories/wp-content/uploads/2021/08/rekomendasi-kost-rukita-yang-punya-sarana-olahraga-thamrin.jpg',
+    imageAlt: 'Kamar tidur Kost Minimalis dengan perabotan modern',
+    href: '/kost-details/minimalis',
   },
   {
-    name: 'Travel',
-    description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
-    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    name: 'Kost Strategis',
+    description: 'Dekat kampus dan pusat perbelanjaan',
+    imageSrc: 'https://www.rukita.co/stories/wp-content/uploads/2022/12/Rukita-Rukosta-Jelambar-Grogol.jpg',
+    imageAlt: 'Kost Strategis dekat dengan kampus dan mall',
+    href: '/kost-details/strategis',
   },
 ]
 
 export default function Recommendation() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50 py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900">Rekomendasi Kost-Kostan</h2>
+          <p className="mt-4 text-lg text-gray-600">Temukan kost yang cocok untuk kebutuhan Anda.</p>
+        </div>
 
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-            {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
-                <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                  <img
-                    alt={callout.imageAlt}
-                    src={callout.imageSrc}
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
-                <h3 className="mt-6 text-sm text-gray-500">
+        <div className="mt-12 grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {callouts.map((callout) => (
+            <div key={callout.name} className="group relative shadow-lg rounded-lg overflow-hidden bg-white">
+              <div className="relative h-72 w-full overflow-hidden group-hover:opacity-90 transition-opacity duration-300">
+                <img
+                  src={callout.imageSrc}
+                  alt={callout.imageAlt}
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900">
                   <a href={callout.href}>
                     <span className="absolute inset-0" />
                     {callout.name}
                   </a>
                 </h3>
-                <p className="text-base font-semibold text-gray-900">{callout.description}</p>
+                <p className="mt-2 text-sm text-gray-500">{callout.description}</p>
+                <a 
+                  href={callout.href} 
+                  className="mt-4 inline-block text-teal-600 hover:text-teal-800 font-semibold text-sm"
+                >
+                  Lihat Detail
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -100,11 +100,11 @@ export default function Navbar() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Features
+          <a href="/About" className="text-sm font-semibold leading-6 text-gray-900">
+         Tentang Kami
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
+          <a href="/Cari Kost" className="text-sm font-semibold leading-6 text-gray-900">
+        Cari Kost
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Company
