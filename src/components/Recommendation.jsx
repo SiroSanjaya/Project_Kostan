@@ -4,7 +4,7 @@ const callouts = [
     description: 'Kost nyaman untuk mahasiswa dan pekerja',
     imageSrc: 'https://www.rukita.co/stories/wp-content/uploads/2023/05/Common-Coliving-Addams-1.webp',
     imageAlt: 'Gambar tampilan depan Kost Cozy Living',
-    href: '/kost-details/cozy-living',
+    href: '/ProductOverview',
   },
   {
     name: 'Kost Minimalis',

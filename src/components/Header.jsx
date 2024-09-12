@@ -21,56 +21,56 @@ export default function Header() {
                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                   <div className="flex items-center space-x-6 lg:space-x-8">
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100 transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Cozy"
-                          src="https://example.com/img/kost-cozy.jpg"
+                          src="https://artikel.rumah123.com/news-content/img/2021/09/02212547/Desain-Kos-Kosan-Pinterest9.jpg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Minimalis"
-                          src="https://example.com/img/kost-minimalis.jpg"
+                          src="https://events.rumah123.com/wp-content/uploads/sites/38/2021/10/17144716/desain-kos-kosan-industrial-modern.jpg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                     </div>
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Strategis"
-                          src="https://example.com/img/kost-strategis.jpg"
+                          src="https://idkos.com/images/artikel/16-contoh-desain-koskosan-yang-menarik-untuk-bisnis-atau-referensi-kamar-anda-46.jpeg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Ekonomis"
-                          src="https://example.com/img/kost-ekonomis.jpg"
+                          src="https://blog-images.reddoorz.com/uploads/ckeditor/pictures/5058/content_kamar_kost_aesthetic.jpg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Elite"
-                          src="https://example.com/img/kost-elite.jpg"
+                          src="https://silamparitv.disway.id/upload/c97b5e37c597a425ea5612dc3cd6ec95.jpg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                     </div>
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Murah"
-                          src="https://example.com/img/kost-murah.jpg"
+                          src="https://silamparitv.disway.id/upload/c97b5e37c597a425ea5612dc3cd6ec95.jpg"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg transition-transform transform hover:scale-105">
                         <img
                           alt="Kost Nyaman"
-                          src="https://example.com/img/kost-nyaman.jpg"
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRljtZ0cwBLL5O4lu138uOWB6zrUB5otc7doSH9B6dJ5Yts0S8OdgLToHtQb6SraKYAn4M&usqp=CAU"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -81,14 +81,16 @@ export default function Header() {
 
               <a
                 href="#explore-kost"
-                className="inline-block rounded-md border border-transparent bg-teal-600 px-8 py-3 text-center font-medium text-white hover:bg-teal-700 transition-colors duration-300"
+                className="inline-block mt-10 rounded-md border border-transparent bg-teal-600 px-8 py-3 text-center font-medium text-white hover:bg-teal-700 transition-colors duration-300"
               >
                 Cari Kost Sekarang
               </a>
             </div>
           </div>
         </div>
+        
       </div>
+      
     </div>
   )
 }

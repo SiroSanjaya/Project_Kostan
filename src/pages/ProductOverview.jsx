@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
-import { Radio, RadioGroup } from '@headlessui/react'
 import { FaCheckCircle, FaWifi, FaShower, FaConciergeBell } from 'react-icons/fa'
+import { MapPinIcon } from '@heroicons/react/24/outline'
 import Recommendation from '../components/Recommendation'
 
 const property = {
@@ -40,13 +40,9 @@ const property = {
   ],
   description:
     'Kostan Cozy Living menawarkan kenyamanan dan kemudahan dengan fasilitas lengkap. Dengan kamar ber-AC, WiFi gratis, dan kamar mandi dalam, kami menyediakan tempat tinggal yang ideal untuk Anda yang mencari kenyamanan dan kemudahan. Bergabunglah dengan komunitas kami dan nikmati fasilitas terbaik.',
-  details:
-    [
-      { name: 'Kamar dengan AC', icon: <FaCheckCircle className="h-6 w-6 text-teal-500" /> },
-      { name: 'WiFi gratis', icon: <FaWifi className="h-6 w-6 text-teal-500" /> },
-      { name: 'Kamar mandi dalam', icon: <FaShower className="h-6 w-6 text-teal-500" /> },
-      { name: 'Ruang bersama', icon: <FaConciergeBell className="h-6 w-6 text-teal-500" /> },
-    ],
+  address: 'Jl. Contoh Alamat No.123, Kota, Negara', // Ganti dengan alamat sebenarnya
+  mapUrl: 'https://www.google.com/maps?q=Jl.+Contoh+Alamat+No.123,+Kota,+Negara', // Ganti dengan URL peta sebenarnya
+  videoUrl: 'https://www.youtube.com/embed/VIDEO_ID' // Ganti dengan ID video YouTube sebenarnya
 }
 
 const reviews = { href: '#', average: 4, totalCount: 50 }
@@ -151,41 +147,45 @@ export default function PropertyOverview() {
                     />
                   ))}
                 </div>
-                
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-teal-600 hover:text-teal-500">
-                  {reviews.totalCount} reviews
+                <p className="ml-2 text-sm font-medium text-gray-900">{reviews.totalCount} reviews</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="mt-6">
+              <h2 className="text-lg font-medium text-gray-900">Location</h2>
+              <div className="flex items-center space-x-2">
+                <MapPinIcon className="h-6 w-6 text-teal-500" />
+                <a href={property.mapUrl} target="_blank" rel="noopener noreferrer" className="text-base text-gray-500">
+                  {property.address}
                 </a>
               </div>
-              
             </div>
-            <div className="mt-6 lg:col-span-2 lg:mt-0 lg:pr-8">
-              <a href="#" className="inline-block px-6 py-3 text-white bg-teal-600 rounded-md shadow-sm hover:bg-teal-700">Pesan Sekarang
-              </a>
-              </div>
+
+            {/* Video */}
+  
           </div>
 
-          {/* Description */}
-          <div className="mt-4 lg:col-span-2 lg:mt-0 lg:pr-8">
-            <h2 className="text-lg font-medium text-gray-900">Description</h2>
-            <p className="mt-2 text-base text-gray-500">{property.description}</p>
+          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1">
+            <h2 className="text-lg font-medium text-gray-900">About</h2>
+            <p className="mt-4 text-base text-gray-500">{property.description}</p>
           </div>
 
-          {/* Details */}
-          <div className="mt-6 lg:col-span-2 lg:mt-0 lg:pr-8">
-            <h3 className="text-lg font-medium text-gray-900">Fasilitas</h3>
-            <ul role="list" className="mt-2 space-y-4">
-              {property.details.map((detail) => (
-                <li key={detail.name} className="flex items-center text-base text-gray-500">
-                  {detail.icon}
-                  <span className="ml-3">{detail.name}</span>
+          {/* Features */}
+          <div className="mt-6 lg:col-span-2 lg:row-span-1 lg:mt-0">
+            <h2 className="text-lg font-medium text-gray-900">Features</h2>
+            <ul role="list" className="mt-4 space-y-4">
+              {property.features.map((feature) => (
+                <li key={feature.name} className="flex gap-x-3">
+                  {feature.icon}
+                  <p className="text-base text-gray-500">{feature.name}</p>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-      <Recommendation/>
     </div>
   )
 }
